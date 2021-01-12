@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <div th:fragment="navbar"
 	class="navbar navbar-dark navbar-expand-md bg-dark mb-1">
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -11,18 +12,21 @@
 	<div class="container">
 		<div class="col-lg-6">
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link text-white m-1"
-						href="/disciplinas">Disciplinas</a></li>
-					<li class="nav-item"><a class="nav-link text-white m-1"
-						href="/cadastra-disciplina">Nova Disciplina</a></li>
+				<ul class="navbar-nav mr-auto ">
+					<li class="nav-item"><a class="nav-link text-white m-1 "
+						href="/disciplinas">Virtual Line</a></li>
+					<li class="nav-item"><a class="nav-link text-white m-1 "
+						href="/cadastra-disciplina">Entrar na fila</a></li>
+					<li class="nav-item"><a class="nav-link text-white m-1 "
+						href="/home">Home</a></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="col-lg-6 text-right text-white">
-			<a href="https:www.linkedin.com/in/cristina-kochmann-a1a590161">
-				<h3>kochmann.com</h3>
+			<a href="https:www.linkedin.com/in/cristina-kochmann-a1a590161"
+				target="_blank">
+				<h2>kochmann.com</h2>
 			</a>
 		</div>
 	</div>
@@ -45,13 +49,17 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<p>No segundo período o estudante desenvolverá um sistema web
-						monolítico utilizando template engine MVC e acesso a dados baseado
-						em comandos SQL. A concepção deste projeto foi para que o
-						estudante tenha a oportunidade tanto de utilizar uma tecnologia de
-						template engine, bem como aplicar na prática o acesso a dados de
-						uma forma mais manual, via comandos SQL, sem ainda recorrer a
-						ferramentas modernas de mapeamento objeto-relacional.</p>
+					<p>Filas estão presentes em nossas rotinas, seja para pagar uma
+						conta ou receber um dinheiro. É fato que ninguém enfrenta uma fila
+						porque quer e espera que chegue sua vez o mais rápido possível.
+						Isso fez com que nos dedicássemos a minimizar os problemas e
+						efeitos da espera e irritação dos clientes. Para tanto,
+						desenvolvemos um sistema web monolítico utilizando template engine
+						MVC e acesso a dados baseado em comandos SQL. A concepção deste
+						projeto foi para que o empresário tenha facilidade para
+						organização, utilizando uma tecnologia de template engine, e o
+						cliente tenha a comodidade de aguardar como preferir, sendo
+						avisado pelo colaborador momentos antes de seu atendimento.</p>
 					<p>Tecnologias utilizadas neste sistema:</p>
 					<ul>
 						<li>GitHub</li>

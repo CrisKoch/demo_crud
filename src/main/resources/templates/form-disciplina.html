@@ -5,28 +5,29 @@
 		<form action="/cadastra-disciplina" method="post"
 			th:object="${disciplina}">
 			<div class="form-group">
-			<label>Código: </label>
-			<input type="text"th:field="*{codigo_sala_classroom}" class="form-control">
+			<label>Primeiro Cadastro? </label>
+			<input type="text"th:field="*{codigo_sala_classroom}" class="form-control" placeholder="Sim/Não">
 			</div>
 			<div class="form-group">
 			<label>Nome:</label>
-			<input type="text" th:field="*{nome}"class="form-control"> 
+			<input type="text" th:field="*{nome}"class="form-control" placeholder="Nome completo"> 
 			</div>
 			<div class="form-group">
-			<label>Período:</label><br>
+			<label>Quantas notas serão cadastradas:</label><br>
 			
-			<div class= "form-check form-check-inline" th:each=" p:${#numbers.sequence(1,5)}">
-			<input type="radio" th:value="${p}" th:field="*{periodo}" class="form-check-input">
+			<div class= "form-check form-check-inline" th:each=" p:${#numbers.sequence(1,10)}">
+			<input type="radio" th:value="${p}" th:field="*{periodo}" class="form-check-input"><br><br>
 			<label th:for="${#ids.prev('periodo')}" th:text="${p}"></label>
 			</div>
 			
 			
 			<div class="form-group">
-			<label>Professor:</label>
-			<input type="text" th:field="*{professor}"class="form-control">
+			<label>Celular:</label>
+			<input type="text" th:field="*{professor}"class="form-control" placeholder="(XX) XXXXX-XXXX">
 			</div>
 			<button type="submit" class="btn btn-primary">Cadastrar</button>
-			<button type="reset" class="btn btn-primary">Limpar</button>
+			<button type="reset" class="btn btn-secondary">Limpar</button>
+			
 			
 		</form>
 	</div>
