@@ -2,18 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout">
 <div th:fragment="conteudo">
 	<div class="container mt-3">
-		<form action="/cadastra-disciplina" method="post"
+		<form method="post"
 			th:object="${disciplina}">
 			<div class="form-group">
-			<label>Primeiro Cadastro? </label>
-			<input type="text"th:field="*{codigo_sala_classroom}" class="form-control" placeholder="Sim/N„o">
+			<label>Primeiro Cadastro? </label><br>
+			<input type="radio" value="Sim" th:field="*{codigo_sala_classroom}" > Sim
+			<input type="radio" value="N√£o" th:field="*{codigo_sala_classroom}" > N√£o
+			
 			</div>
 			<div class="form-group">
 			<label>Nome:</label>
 			<input type="text" th:field="*{nome}"class="form-control" placeholder="Nome completo"> 
 			</div>
 			<div class="form-group">
-			<label>Quantas notas ser„o cadastradas:</label><br>
+			<label>Quantas notas fiscais ser√£o cadastradas:</label><br>
 			
 			<div class= "form-check form-check-inline" th:each=" p:${#numbers.sequence(1,10)}">
 			<input type="radio" th:value="${p}" th:field="*{periodo}" class="form-check-input"><br><br>

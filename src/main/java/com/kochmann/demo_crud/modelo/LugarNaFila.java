@@ -1,16 +1,42 @@
 package com.kochmann.demo_crud.modelo;
 
-public class Disciplina {
-	public Integer id, periodo;
-	public String nome, professor, codigo_sala_classroom;
+import java.sql.Timestamp;
+import java.time.Instant;
+
+public class LugarNaFila {
+	private Integer id, periodo;
+	private String nome, professor, codigo_sala_classroom;
+	private Timestamp timeStamp;
 	
-	
-	public Disciplina() {
+	public LugarNaFila(Integer id, Integer periodo, String nome, String professor, String codigo_sala_classroom,
+			Timestamp timeStamp) {
+		super();
+		this.id = id;
+		this.periodo = periodo;
+		this.nome = nome;
+		this.professor = professor;
+		this.codigo_sala_classroom = codigo_sala_classroom;
+		this.timeStamp = timeStamp;
+	}
+
+
+	public Timestamp getTimeStamp() {
+		
+		return timeStamp;
+	}
+
+
+	public void setTimeStamp(Timestamp timeStamp) {
+		this.timeStamp = timeStamp;
+	}
+
+
+	public LugarNaFila() {
 		super();
 	}
 
 
-	public Disciplina(Integer periodo, String nome, String professor, String codigo_sala_classroom) {
+	public LugarNaFila(Integer periodo, String nome, String professor, String codigo_sala_classroom) {
 		super();
 		this.periodo = periodo;
 		this.nome = nome;
@@ -19,7 +45,7 @@ public class Disciplina {
 	}
 
 
-	public Disciplina(Integer id, Integer periodo, String nome, String professor, String codigo_sala_classroom) {
+	public LugarNaFila(Integer id, Integer periodo, String nome, String professor, String codigo_sala_classroom) {
 		super();
 		this.id = id;
 		this.periodo = periodo;
